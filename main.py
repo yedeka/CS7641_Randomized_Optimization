@@ -34,17 +34,18 @@ def perform_one_max():
             'MIMIC': [results_20['MIMIC'][0], results_40['MIMIC'][0], results_60['MIMIC'][0], results_80['MIMIC'][0],
                       results_100['MIMIC'][0]],
             }
-    print("Flip flop results")
+    print("One Max results")
     print(data)
     df = pd.DataFrame(data, columns=['Problem_Size', 'RHC', 'SA', 'GA', 'MIMIC'])
-    plt.plot(x=df['Problem_Size'], y=df['RHC'], label='Randomized Hill Climbing')
-    # plt.plot(x=data['Problem_Size'], y=data['SA'], label='Simulated Annealing', marker='o', color='blue')
-    # plt.plot(x=data['Problem_Size'], y=data['GA'], label='Genetic Algorithm', marker='o', color='yellow')
-    # plt.plot(x=data['Problem_Size'], y=data['MIMIC'], label='MIMIC', marker='o', color='green')
+    ax = plt.gca()
+
+    df.plot(kind='line', x='Problem_Size', y='RHC', marker='o', ax=ax)
+    df.plot(kind='line', x='Problem_Size', y='SA', marker='o', ax=ax)
+    df.plot(kind='line', x='Problem_Size', y='GA', marker='o', ax=ax)
+    df.plot(kind='line', x='Problem_Size', y='MIMIC', marker='o', ax=ax)
+
     plt.xlabel('Problem Size')
-    # Set the y axis label of the current axis.
     plt.ylabel('Fitness Values')
-    # Set a title of the current axes.
     plt.title('Randomized Optimization for one max problem')
     plt.grid(True)
     plt.savefig('One Max Performance.png')
@@ -85,9 +86,7 @@ def perform_flip_flop():
     # plt.plot(x=data['Problem_Size'], y=data['GA'], label='Genetic Algorithm', marker='o', color='yellow')
     # plt.plot(x=data['Problem_Size'], y=data['MIMIC'], label='MIMIC', marker='o', color='green')
     plt.xlabel('Problem Size')
-    # Set the y axis label of the current axis.
     plt.ylabel('Fitness Values')
-    # Set a title of the current axes.
     plt.title('Randomized Optimization for flip flop problem')
     plt.grid(True)
     plt.savefig('Flip flop Performance.png')
