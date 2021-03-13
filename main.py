@@ -12,18 +12,28 @@ def perform_one_max():
     problem_size = 20
     init_state = lambda: np.random.randint(2, size=problem_size)
     results_20 = run_one_max(init_state(), problem_size)
+    print("One Max n =20")
+    print(results_20)
     problem_size = 40
     init_state = lambda: np.random.randint(2, size=problem_size)
     results_40 = run_one_max(init_state(), problem_size)
+    print("One Max n =40")
+    print(results_40)
     problem_size = 60
     init_state = lambda: np.random.randint(2, size=problem_size)
     results_60 = run_one_max(init_state(), problem_size)
+    print("One Max n =60")
+    print(results_60)
     problem_size = 80
     init_state = lambda: np.random.randint(2, size=problem_size)
     results_80 = run_one_max(init_state(), problem_size)
+    print("One Max n =80")
+    print(results_80)
     problem_size = 100
     init_state = lambda: np.random.randint(2, size=problem_size)
     results_100 = run_one_max(init_state(), problem_size)
+    print("One Max n =100")
+    print(results_100)
     data = {'Problem_Size': [20, 40, 60, 80, 100],
             'RHC': [results_20['RHC'][0], results_40['RHC'][0], results_60['RHC'][0], results_80['RHC'][0],
                     results_100['RHC'][0]],
@@ -57,18 +67,28 @@ def perform_flip_flop():
     problem_size = 20
     init_state = lambda: np.random.randint(2, size=problem_size)
     results_20 = run_flip_flop(init_state(), problem_size)
+    print("Flip flop n =20")
+    print(results_20)
     problem_size = 40
     init_state = lambda: np.random.randint(2, size=problem_size)
     results_40 = run_four_peaks(init_state(), problem_size)
+    print("Flip flop n =40")
+    print(results_40)
     problem_size = 60
     init_state = lambda: np.random.randint(2, size=problem_size)
     results_60 = run_four_peaks(init_state(), problem_size)
+    print("Flip flop n =60")
+    print(results_60)
     problem_size = 80
     init_state = lambda: np.random.randint(2, size=problem_size)
     results_80 = run_four_peaks(init_state(), problem_size)
+    print("Flip flop n =80")
+    print(results_80)
     problem_size = 100
     init_state = lambda: np.random.randint(2, size=problem_size)
     results_100 = run_four_peaks(init_state(), problem_size)
+    print("Flip flop n =100")
+    print(results_100)
     data = {'Problem_Size': [20, 40, 60, 80, 100],
             'RHC': [results_20['RHC'][0], results_40['RHC'][0], results_60['RHC'][0], results_80['RHC'][0],
                     results_100['RHC'][0]],
@@ -103,18 +123,28 @@ def perform_plot_fourPeaks():
     problem_size = 20
     init_state = lambda: np.random.randint(2, size=problem_size)
     results_20 = run_four_peaks(init_state(), problem_size)
+    print("4 Peaks n =20")
+    print(results_20)
     problem_size = 40
     init_state = lambda: np.random.randint(2, size=problem_size)
     results_40 = run_four_peaks(init_state(), problem_size)
+    print("4 Peaks n =40")
+    print(results_40)
     problem_size = 60
     init_state = lambda: np.random.randint(2, size=problem_size)
     results_60 = run_four_peaks(init_state(), problem_size)
+    print("4 Peaks n =60")
+    print(results_60)
     problem_size = 80
     init_state = lambda: np.random.randint(2, size=problem_size)
     results_80 = run_four_peaks(init_state(), problem_size)
+    print("4 Peaks n =80")
+    print(results_80)
     problem_size = 100
     init_state = lambda: np.random.randint(2, size=problem_size)
     results_100 = run_four_peaks(init_state(), problem_size)
+    print("4 Peaks n =100")
+    print(results_100)
     data = {'Problem_Size': [20,40,60,80,100],
             'RHC': [results_20['RHC'][0], results_40['RHC'][0], results_60['RHC'][0], results_80['RHC'][0], results_100['RHC'][0]],
             'SA' : [results_20['SA'][0], results_40['SA'][0], results_60['SA'][0], results_80['SA'][0], results_100['SA'][0]],
