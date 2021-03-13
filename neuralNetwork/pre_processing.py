@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 
 
 def loadBankDataSet():
-    dataset = pd.read_csv("bank.csv");
+    dataset = pd.read_csv("neuralNetwork/bank.csv");
     return dataset
 
 def loadExploreDataSet():
