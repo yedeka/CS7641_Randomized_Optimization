@@ -27,13 +27,14 @@ def run_flip_flop(initial_state, vector_dimension):
 
     print("Running genetic algorithm")
     start = datetime.now()
-    ga_results, ga_fitness =  mlrose.genetic_alg(problem, max_attempts=100, max_iters=1000);
+    ga_results, ga_fitness =  mlrose.genetic_alg(problem, max_iters=200, mutation_prob=0.5, max_attempts=200)
+
     end = datetime.now()
     results['GA'] = [ga_fitness, (end-start).total_seconds()]
 
     print("Running MIMIC")
     start = datetime.now()
-    mimic_results, mimic_fitness = mlrose.mimic(problem, max_attempts=100, max_iters=1000);
+    mimic_results, mimic_fitness = mlrose.mimic(problem, max_iters=200,keep_pct=.5, max_attempts=200)
     end = datetime.now()
     results['MIMIC'] = [mimic_fitness, (end-start).total_seconds()]
 

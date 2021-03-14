@@ -31,8 +31,6 @@ def get_dummy_from_bool(row, column_name):
 
 def clean_data(df):
     cleaned_df = df.copy()
-    print('Columns before ')
-    print(cleaned_df.columns)
     # Convert boolean columns into 0/1 columns
     truthy_clmns = ['default', 'deposit', 'housing', 'loan']
     for truthy_col in truthy_clmns:
@@ -54,10 +52,6 @@ def clean_data(df):
     cleaned_df['previous_cleaned'] = df.apply(lambda row: get_correct_values(row, 'previous', 34, cleaned_df), axis=1)
 
     cleaned_df = cleaned_df.drop(columns=['campaign', 'previous'])
-
-    print('Columns After ')
-    print(cleaned_df.columns)
-    print(cleaned_df.head())
     return cleaned_df
 
 def load_cleanse_data():
