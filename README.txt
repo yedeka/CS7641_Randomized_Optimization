@@ -12,7 +12,7 @@ environment setup -
 	conda activate ml
 	pip install yellowbrick
 	pip install mlrose
-    mlrose-hiive 2.2.4
+    pip install mlrose-hiive
 5] The entire code has been developed using pycharm.
 6] Please install pycharm. 
 7] Create a new project by importing the source code from git repo.
