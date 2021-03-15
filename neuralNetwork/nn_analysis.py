@@ -242,8 +242,8 @@ def run_nn_analysis_GA():
     print("Tuned Data End ------------------------------------------------------------------")
     print("Tuned Data Confusion Matrix ------------------------------------------------------------------")
     cm = confusion_matrix(prepareddata['Y_test'], y_pred)
-    F1_score = f1_score(prepareddata['Y_test'], y_pred, average="weighted")
-    print(F1_score)
+    F1_score_100 = f1_score(prepareddata['Y_test'], y_pred, average="weighted")
+    print(F1_score_100)
     print(cm)
 
     rhcmodel = mlrose_hiive.NeuralNetwork(hidden_nodes=[50], activation='sigmoid',
@@ -258,8 +258,8 @@ def run_nn_analysis_GA():
     print("Tuned Data End ------------------------------------------------------------------")
     print("Tuned Data Confusion Matrix ------------------------------------------------------------------")
     cm = confusion_matrix(prepareddata['Y_test'], y_pred)
-    F1_score = f1_score(prepareddata['Y_test'], y_pred, average="weighted")
-    print(F1_score)
+    F1_score_200 = f1_score(prepareddata['Y_test'], y_pred, average="weighted")
+    print(F1_score_200)
     print(cm)
 
     rhcmodel = mlrose_hiive.NeuralNetwork(hidden_nodes=[50], activation='sigmoid',
@@ -274,8 +274,8 @@ def run_nn_analysis_GA():
     print("Tuned Data End ------------------------------------------------------------------")
     print("Tuned Data Confusion Matrix ------------------------------------------------------------------")
     cm = confusion_matrix(prepareddata['Y_test'], y_pred)
-    F1_score = f1_score(prepareddata['Y_test'], y_pred, average="weighted")
-    print(F1_score)
+    F1_score_300 = f1_score(prepareddata['Y_test'], y_pred, average="weighted")
+    print(F1_score_300)
     print(cm)
 
     rhcmodel = mlrose_hiive.NeuralNetwork(hidden_nodes=[50], activation='sigmoid',
@@ -290,8 +290,8 @@ def run_nn_analysis_GA():
     print("Tuned Data End ------------------------------------------------------------------")
     print("Tuned Data Confusion Matrix ------------------------------------------------------------------")
     cm = confusion_matrix(prepareddata['Y_test'], y_pred)
-    F1_score = f1_score(prepareddata['Y_test'], y_pred, average="weighted")
-    print(F1_score)
+    F1_score_400 = f1_score(prepareddata['Y_test'], y_pred, average="weighted")
+    print(F1_score_400)
     print(cm)
 
     rhcmodel = mlrose_hiive.NeuralNetwork(hidden_nodes=[50], activation='sigmoid',
@@ -306,7 +306,15 @@ def run_nn_analysis_GA():
     print("Tuned Data End ------------------------------------------------------------------")
     print("Tuned Data Confusion Matrix ------------------------------------------------------------------")
     cm = confusion_matrix(prepareddata['Y_test'], y_pred)
-    F1_score = f1_score(prepareddata['Y_test'], y_pred, average="weighted")
-    print(F1_score)
+    F1_score_500 = f1_score(prepareddata['Y_test'], y_pred, average="weighted")
+    print(F1_score_500)
     print(cm)
+
+    return {
+        '100_accuracy': F1_score_100,
+        '200_accuracy':F1_score_200,
+        '300_accuracy':F1_score_300,
+        '400_accuracy':F1_score_400,
+        '500_accuracy':F1_score_500
+    }
 
